@@ -3,7 +3,7 @@ function Rating(props) {
 
   return (
     <div>
-      <span className="text-orange-400">
+      <span className="text-gray-900">
         <i
           className={
             rating >= 1
@@ -14,7 +14,7 @@ function Rating(props) {
           }
         />
       </span>
-      <span className="text-orange-400">
+      <span className="text-gray-900">
         <i
           className={
             rating >= 2
@@ -25,7 +25,7 @@ function Rating(props) {
           }
         />
       </span>
-      <span className="text-orange-400">
+      <span className="text-gray-900">
         <i
           className={
             rating >= 3
@@ -36,7 +36,7 @@ function Rating(props) {
           }
         />
       </span>
-      <span className="text-orange-400">
+      <span className="text-gray-900">
         <i
           className={
             rating >= 4
@@ -47,7 +47,7 @@ function Rating(props) {
           }
         />
       </span>
-      <span className="text-orange-400">
+      <span className="text-gray-900">
         <i
           className={
             rating >= 5
@@ -58,7 +58,8 @@ function Rating(props) {
           }
         />
       </span>
-      <span className="font-bold" > {numReviews} </span><span className="font-bold"> reviews </span>
+      <span className="font-bold"> {numReviews} </span>
+      <span className="font-bold"> </span>
     </div>
   );
 }

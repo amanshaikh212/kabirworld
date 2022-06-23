@@ -8,6 +8,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 main {
@@ -30,4 +31,18 @@ main {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.checkout > div {
+  border-bottom: 0.2rem solid #a0a0a0;
+  color: black;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+.checkout > div.active {
+  margin-top: 0.5rem;
+  padding-bottom: 6px;
+  border-bottom: 0.2rem solid rgb(39, 37, 35);
+  color: black;
+  font-weight: bold;
 }

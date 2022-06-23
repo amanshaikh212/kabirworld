@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useState } from 'react';
+import { useEffect, useReducer } from 'react';
 import axios from 'axios';
 import logger from 'use-reducer-logger';
 import Product from './Product';
@@ -45,7 +45,7 @@ function HomeScreen() {
       <Helmet>
         <title>Kabirworld</title>
       </Helmet>
-      <h1 className="text-3xl font-bold">Featured Products</h1>
+      <h1 className="text-5xl font-bold text-center mb-[10px] ">SHOP</h1>
       <div className="flex flex-wrap justify-center">
         {loading ? (
           <LoadingBox />

@@ -1,9 +1,10 @@
 import axios from 'axios';
 import { useContext, useEffect, useReducer } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Navigate, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { Store } from '../Store';
-import { getError } from '../utlis';
+import { getError } from '../utils';
 import LoadingBox from './LoadingBox';
 import MessageBox from './MessageBox';
 import Rating from './Rating';
@@ -52,7 +53,7 @@ function ProductScreen() {
     const quantity = existItem ? existItem.quantity + 1 : 1;
     const { data } = await axios.get(`/api/products/${product._id}`);
     if (data.countInStock < quantity) {
-      window.alert('Sorry, this item is out of stock!');
+      toast.error('Sorry, this item is out of stock!');
       return;
     }
     ctxDispatch({
@@ -69,7 +70,7 @@ function ProductScreen() {
   ) : (
     <div className="grid grid-cols-3">
       <div>
-        <img className="max-w-screen" src={product.image} alt={product.name} />
+        <img className="max-w-screen " src={product.image} alt={product.name} />
       </div>
       <div className="flex flex-col">
         <div>
@@ -79,7 +80,7 @@ function ProductScreen() {
           <h1 className="font-bold text-5xl">{product.name}</h1>
         </div>
         <div className="mt-4 border-t-2">
-          <Rating rating={product.rating} numReviews={product.numReviews} />
+          <Rating rating={product.rating} />
         </div>
         <div className="mt-4 border-t-2 font-bold text-xl">
           Price: ${product.price}
@@ -97,11 +98,11 @@ function ProductScreen() {
           <span className="font-bold text-lg mb-4">Status </span>{' '}
           <span>
             {product.countInStock > 0 ? (
-              <button className="bg-green-500 font-bold p-2 rounded-md">
+              <button className="bg-green-500 font-bold p-2 ">
                 Available
               </button>
             ) : (
-              <button className="bg-red-500 font-bold p-2 rounded-md">
+              <button className="bg-red-500 font-bold p-2 ">
                 Unavailable
               </button>
             )}
@@ -111,9 +112,9 @@ function ProductScreen() {
           <div className="text-center mt-4 border-t-2">
             <button
               onClick={addToCartHandler}
-              className="bg-orange-400 p-2 rounded-md mt-4"
+              className="mt-[10px] bg-gray-800 p-2 w-[100px]  shadow-md font-semibold border-2 text-gray-200 hover:bg-gray-900"
             >
-              Add to Cart
+            BUY
             </button>
           </div>
         )}
