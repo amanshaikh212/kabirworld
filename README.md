@@ -177,3 +177,11 @@
     2. show user information
     3. create user update api
     4. update user info
+
+32. Publish To Heroku
+    1. create and config node project
+    2. serve build folder in frontend folder
+    3. Create heroku Account
+    4. connect it to github
+    5. set database connection in heroku env variables
+    6. commit and push

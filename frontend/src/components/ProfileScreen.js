@@ -66,7 +66,6 @@ export default function ProfileScreen() {
           <label className="text-gray-600">Name</label>
           <input
             className="max-w-[400px] border-b-2 outline-none border-gray-200"
-            type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
