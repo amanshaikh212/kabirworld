@@ -185,3 +185,12 @@
     4. connect it to github
     5. set database connection in heroku env variables
     6. commit and push
+
+33. Create Sidebar and SearchBox component
+    1. create sidebar
+    2. add api
+    3. create search box 
+34. Create Search screen
+    1. show filters
+    2. create api for searching products
+    3. display results

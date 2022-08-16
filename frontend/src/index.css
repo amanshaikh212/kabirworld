@@ -46,3 +46,24 @@ main {
   color: black;
   font-weight: bold;
 }
+.navbar-brand{
+  font-weight: bold;
+}
+.side-navbar{
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  left: -300%;
+  background-color: #100901;
+  transition: 0.5s;
+}
+.site-container{
+  transition: 0.4s;
+}
+.active-cont {
+  margin-left:0px;
+  
+}
+.active-nav{
+  left: 0;
+}
